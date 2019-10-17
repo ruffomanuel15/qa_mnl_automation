@@ -36,5 +36,16 @@ class LoginPage(BasePage):
         # Commands.if_visible_click_xpath(cta_test)
         # WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, cta_test))).click()
 
+        # This is a sample comment to verify the changes -- Erika
+
     def screenshot(self):
         Commands.take_screenshot(self.driver, test="search_test")
+
+    def createfile(self):
+        f = open("uzi.txt", "w+")
+        # open or create a text file
+        for i in range(10):
+            f.write("This is line %d\r\n" % (i + 1))
+            # write string in text file
+        f.close()
+        # close file
