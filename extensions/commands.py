@@ -40,6 +40,7 @@ class Commands(Base):
         name = test
 
         self.save_screenshot('/Users/erikabonganay/Desktop/' + str(name) + '_' + str(date) + '_.png')
+
         return test
 
     @classmethod
@@ -75,3 +76,5 @@ class Commands(Base):
         temp = WebDriverWait(selenium, 10).until(
             EC.visibility_of_element_located(selector), message=msg)  # locate account menu
         ActionChains(selenium).move_to_element(temp).perform()
+
+        #test comment

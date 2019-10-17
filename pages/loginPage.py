@@ -40,3 +40,14 @@ class LoginPage(BasePage):
 
     def screenshot(self):
         Commands.take_screenshot(self.driver, test="search_test")
+
+    def createfile(self):
+        f = open("uzi.txt", "w+")
+        # open or create a text file
+        for i in range(10):
+            f.write("This is line %d\r\n" % (i + 1))
+            # write string in text file
+        f.close()
+        # close file
+
+#AJ: Inserts Comment Here!
