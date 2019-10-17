@@ -13,3 +13,5 @@ class TestProjectLogin(object):
         on.LoginPage.screenshot(self)
         #RicardoMilosNumbah1
         on.LoginPage.createfile(self)
+        #JoyceDacanay
+        on.LoginPage.createfile(self)
