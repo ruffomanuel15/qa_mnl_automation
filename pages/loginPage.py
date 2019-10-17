@@ -36,5 +36,7 @@ class LoginPage(BasePage):
         # Commands.if_visible_click_xpath(cta_test)
         # WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located((By.XPATH, cta_test))).click()
 
+        # This is a sample comment to verify the changes -- Erika
+
     def screenshot(self):
         Commands.take_screenshot(self.driver, test="search_test")
