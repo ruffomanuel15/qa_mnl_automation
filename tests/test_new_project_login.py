@@ -11,3 +11,4 @@ class TestProjectLogin(object):
         #on.LoginPage.login_as_standard_user(self)
         on.LoginPage.search_test(self)
         on.LoginPage.screenshot(self)
+        on.LoginPage.createfile(self)
