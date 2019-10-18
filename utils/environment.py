@@ -1,11 +1,12 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp#, \
-   # samplePage as smp, \
+from pages import loginPage as lp,\
+    letskodeitPage as lc
 
 
 class Pages(object):
     LoginPage = lp.LoginPage
+    LetsKodeit = lc.LetsKodeItPage
   #  SamplePage = smp.SamplePage
 
 # ENVIRONMENT
@@ -13,9 +14,10 @@ environments = {
     'Dev'   : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
     'QA'    : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
     'STG'   : 'https://www.google.com/',
-    'PROD'  : 'https://www.adidas-style.com'
+    'PROD'  : 'https://www.adidas-style.com',
+    'PRAC'  : 'https://learn.letskodeit.com/p/practice'
 }
-page_url = environments['STG']
+page_url = environments['PRAC']
 force_logout = page_url+'/user/logout'
 
 

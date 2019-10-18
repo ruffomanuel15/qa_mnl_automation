@@ -16,3 +16,7 @@ class LandingPageLocators(object):
 class Search(object):
     SEARCH_FIELD = (By.XPATH, '//input[@title="Search"]')
     SEARCH_CTA = (By.XPATH, '(//input[@value="Google Search"])[2]')
+
+
+class LetsKodeitSelectors(object):
+    TABLE = (By.CLASS_NAME, 'table-display')
