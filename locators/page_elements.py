@@ -20,3 +20,6 @@ class Search(object):
 
 class LetsKodeitSelectors(object):
     TABLE = (By.CLASS_NAME, 'table-display')
+    TR = (By.TAG_NAME, "tr")
+    TH = (By.TAG_NAME, "th")
+    TD = (By.TAG_NAME, "td")

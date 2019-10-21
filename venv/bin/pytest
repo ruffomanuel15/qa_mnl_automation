@@ -1,4 +1,4 @@
-#!/Users/raphaelmanuel/qa_mnl_automation/venv/bin/python3.7
+#!/Users/erikabonganay/qa_mnl_automation/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

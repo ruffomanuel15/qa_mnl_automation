@@ -1,6 +1,11 @@
+<<<<<<< HEAD
+#!/Users/erikabonganay/qa_mnl_automation/venv/bin/python3.7
+# -*- coding: utf-8 -*-
+=======
 #!/Users/giuseppeenriquezmbp15/qa_mnl_automation/venv/bin/python
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip'
 __requires__ = 'pip==19.0.3'
+>>>>>>> 23544cf438369f2420e6ae1c54b89b2abedf948e
 import re
 import sys
 from pkg_resources import load_entry_point
