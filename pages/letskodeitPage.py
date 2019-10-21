@@ -19,7 +19,7 @@ class LetsKodeItPage(BasePage):
 
         # TODO assert the remaining elements in the table
 
-        rows = table.find_elements(By.TAG_NAME, "tr")
+        rows = table.find_elements(*LetsKodeitSelectors.TR)
         for row in rows:
             header = row.find_elements(*LetsKodeitSelectors.TH)
             # for th in header:
