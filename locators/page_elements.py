@@ -24,7 +24,9 @@ class LetsKodeitSelectors(object):
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
 
-class ClothingShop(object):
-    IMAGE = ()
-    LABEL = ()
-    PRICE = ()
+
+class ClothingShopSelectors(object):
+    SHOPSECTION = (By.XPATH, "//*[@id='homefeatured']//a")
+    IMAGE = (By.XPATH, "//*[@id='homefeatured']//img")
+    LABEL = (By.XPATH, "//*[@id='homefeatured']//a[@class='product-name']")
+    PRICE = (By.XPATH, "//*[@id='homefeatured']//div[1]/span[@class='price product-price']")

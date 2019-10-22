@@ -1,12 +1,12 @@
 """ SITE CONSTANTS GO HERE """
 
 from pages import loginPage as lp,\
-    letskodeitPage as lc
+    clothingShop as cs
     # pagefile as xx
 
 class Pages(object):
     LoginPage = lp.LoginPage
-    LetsKodeit = lc.LetsKodeItPage
+    ClothingShop = cs.ClothingShop
   #  SamplePage = smp.SamplePage
 
 # ENVIRONMENT
@@ -15,9 +15,10 @@ environments = {
     'QA'    : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
     'STG'   : 'https://www.google.com/',
     'PROD'  : 'https://www.adidas-style.com',
-    'PRAC'  : 'https://learn.letskodeit.com/p/practice'
+    'PRAC'  : 'https://learn.letskodeit.com/p/practice',
+    'SHOP'  : 'http://automationpractice.com/index.php'
 }
-page_url = environments['PRAC']
+page_url = environments['SHOP']
 force_logout = page_url+'/user/logout'
 
 

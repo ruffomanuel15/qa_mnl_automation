@@ -1,7 +1,8 @@
 from locators.page_elements import *
 from utils import environment as env
 from extensions.commands import *
-from selenium.webdriver.common.by import By
+
+
 
 
 class BasePage(object):
@@ -12,7 +13,27 @@ class BasePage(object):
 class ClothingShop(BasePage):
 
     def assertion_tests(self):
-        ShopSection = ()
+        shopSection = self.driver.find_element(*ClothingShopSelectors.SHOPSECTION)
+        images = shopSection.find_elements(*ClothingShopSelectors.IMAGE)
+        for img in images:
+            src = img.get_attribute('src')
+            print(src)
+            assert src is not None, "Image Source is not present"
+        productName = shopSection.find_elements(*ClothingShopSelectors.LABEL)
+        for product in productName:
+            label = product.text
+            print(label)
+            assert label is not None, "Product Label is not present"
+        productPrice = shopSection.find_elements(*ClothingShopSelectors.PRICE)
+        for pprice in productPrice:
+            price = pprice.text
+            print(price)
+            assert price is not None, "Product Price is not present"
+
+
+
+
+
 
         # TODO
         # Objective:
