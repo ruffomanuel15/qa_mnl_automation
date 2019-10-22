@@ -39,7 +39,7 @@ class Commands(Base):
         date = x.ctime()
         name = test
 
-        self.save_screenshot('/Users/erikabonganay/Desktop/' + str(name) + '_' + str(date) + '_.png')
+        self.save_screenshot('/Users/raphaelmanuel/Desktop/' + str(name) + '_' + str(date) + '_.png')
 
         return test
 
