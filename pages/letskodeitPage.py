@@ -21,6 +21,8 @@ class LetsKodeItPage(BasePage):
 
         rows = table.find_elements(*LetsKodeitSelectors.TR)
         for row in rows:
+            # print(row.text)
+            # assert row.is_displayed(), 'Table row is missing'
             header = row.find_elements(*LetsKodeitSelectors.TH)
             # for th in header:
             #     print(th.text)
