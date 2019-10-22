@@ -13,18 +13,17 @@ class BasePage(object):
 class ClothingShop(BasePage):
 
     def assertion_tests(self):
-        shopSection = self.driver.find_element(*ClothingShopSelectors.SHOPSECTION)
-        images = shopSection.find_elements(*ClothingShopSelectors.IMAGE)
+        images = self.driver.find_elements(*ClothingShopSelectors.IMAGE)
         for img in images:
             src = img.get_attribute('src')
             print(src)
             assert src is not None, "Image Source is not present"
-        productName = shopSection.find_elements(*ClothingShopSelectors.LABEL)
+        productName = self.driver.find_elements(*ClothingShopSelectors.LABEL)
         for product in productName:
             label = product.text
             print(label)
             assert label is not None, "Product Label is not present"
-        productPrice = shopSection.find_elements(*ClothingShopSelectors.PRICE)
+        productPrice = self.driver.find_elements(*ClothingShopSelectors.PRICE)
         for pprice in productPrice:
             price = pprice.text
             print(price)

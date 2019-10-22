@@ -26,7 +26,6 @@ class LetsKodeitSelectors(object):
 
 
 class ClothingShopSelectors(object):
-    SHOPSECTION = (By.XPATH, "//*[@id='homefeatured']//a")
-    IMAGE = (By.XPATH, "//*[@id='homefeatured']//img")
-    LABEL = (By.XPATH, "//*[@id='homefeatured']//a[@class='product-name']")
-    PRICE = (By.XPATH, "//*[@id='homefeatured']//div[1]/span[@class='price product-price']")
+    IMAGE = (By.XPATH, "//ul[@id='homefeatured']//img")
+    LABEL = (By.XPATH, "//ul[@id='homefeatured']//a[@class='product-name']")
+    PRICE = (By.XPATH, "//ul[@id='homefeatured']//div[1]/span[@class='price product-price']")
