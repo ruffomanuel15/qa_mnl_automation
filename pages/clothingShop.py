@@ -10,9 +10,46 @@ class BasePage(object):
 
 
 class ClothingShop(BasePage):
+    def is_title_matches(self):
+        return "My Store" in self.driver.title
 
     def assertion_tests(self):
-        ShopSection = ()
+        #pop = self.driver.find_element(*ClothingShopSelectors.POPULAR_CTA)
+        shopSection = self.driver.find_element(*ClothingShopSelectors.POPULARSECTION)
+        images = shopSection.find_elements(*ClothingShopSelectors.POPULARIMAGE)
+        for img in images:
+            src = img.get_attribute('src')
+            print(src)
+            assert src is not None, "Popular image source not found"
+        productName = shopSection.find_elements(*ClothingShopSelectors.POPULARLABEL)
+        for product in productName:
+            label = product.text
+            print(label)
+            assert label is not None, "Popular product label not found"
+        productPrice = shopSection.find_elements(*ClothingShopSelectors.POPULARPRICE)
+        for price in productPrice:
+            price = price.text
+            print(price)
+            assert price is not None, "Popular product price not found"
+
+        # best = self.driver.find_element(*ClothingShopSelectors.BEST_CTA)
+        # best.click()
+        # shopSection = self.driver.find_element(*ClothingShopSelectors.BESTSELLERSECTION)
+        # images = shopSection.find_elements(*ClothingShopSelectors.BESTIMAGE)
+        # for img in images:
+        #     src = img.get_attribute('src')
+        #     print(src)
+        #     assert src is not None, "Best seller image source not found"
+        # productName = shopSection.find_elements(*ClothingShopSelectors.BESTLABEL)
+        # for product in productName:
+        #     label = product.text
+        #     print(label)
+        #     assert label is not None, "Best seller product label not found"
+        # productPrice = shopSection.find_elements(*ClothingShopSelectors.BESTPRICE)
+        # for price in productPrice:
+        #     price = price.text
+        #     print(price)
+        #     assert price is not None, "Best seller product price not found"
 
         # TODO
         # Objective:
