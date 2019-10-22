@@ -23,3 +23,8 @@ class LetsKodeitSelectors(object):
     TR = (By.TAG_NAME, "tr")
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
+
+class ClothingShop(object):
+    IMAGE = ()
+    LABEL = ()
+    PRICE = ()
