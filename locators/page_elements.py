@@ -24,13 +24,18 @@ class LetsKodeitSelectors(object):
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
 
-<<<<<<< HEAD
 
 class ClothingShopSelectors(object):
     IMAGE = (By.XPATH, "//ul[@id='homefeatured']//img")
     LABEL = (By.XPATH, "//ul[@id='homefeatured']//a[@class='product-name']")
     PRICE = (By.XPATH, "//ul[@id='homefeatured']//div[1]/span[@class='price product-price']")
-=======
-class ClothingShopSelectors(object):
-    VAR = () #placeholder
->>>>>>> master
+
+
+class AddToCartSelectors(object):
+    DRESSESLINK = (By.XPATH, "//div[@id='block_top_menu']/ul/li/a[@title='Dresses']")
+    SUMMERDRESS = (By.XPATH, "//ul[@class='product_list grid row']/li[2]")
+    MORE = (By.XPATH, "//div[@id='center_column']/ul/li[2]/div[@class='product-container']//a[@title='View']")
+    QUANTITY = (By.XPATH, "//input[@id='quantity_wanted']")
+    SIZESELECTION = (By.XPATH, "//select[@id='group_1']")
+    COLORSELECTION = (By.XPATH, "//a[@id='color_24']")
+    ADDTOCARDTBTN = (By.XPATH, "//button[@class='exclusive']")

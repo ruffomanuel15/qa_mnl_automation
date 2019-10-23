@@ -7,3 +7,4 @@ from utils.environment import Pages as on
 class TestClothingShop(object):
     def test_add_to_cart(self):
         self.driver.get(env.page_url)
+        on.ClothingShop.add_to_cart(self)
