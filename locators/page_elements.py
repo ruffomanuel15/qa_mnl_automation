@@ -24,8 +24,13 @@ class LetsKodeitSelectors(object):
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
 
+<<<<<<< HEAD
 
 class ClothingShopSelectors(object):
     IMAGE = (By.XPATH, "//ul[@id='homefeatured']//img")
     LABEL = (By.XPATH, "//ul[@id='homefeatured']//a[@class='product-name']")
     PRICE = (By.XPATH, "//ul[@id='homefeatured']//div[1]/span[@class='price product-price']")
+=======
+class ClothingShopSelectors(object):
+    VAR = () #placeholder
+>>>>>>> master
