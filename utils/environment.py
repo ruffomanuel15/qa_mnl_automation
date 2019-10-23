@@ -1,14 +1,17 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp, \
+from pages import clothingShop as cs,\
+    loginPage as lp, \
     letskodeitPage as lc
 
 
 # pagefile as xx
 
 class Pages(object):
+    ClothingShop = cs.ClothingShop
     LoginPage = lp.LoginPage
     LetsKodeit = lc.LetsKodeItPage
+    DressesPage = cs.AddToCart
 
 
 #  SamplePage = smp.SamplePage
@@ -20,8 +23,9 @@ environments = {
     'STG': 'https://www.google.com/',
     'PROD': 'https://www.adidas-style.com',
     'PRAC': 'https://learn.letskodeit.com/p/practice',
+    'SHOP': 'http://automationpractice.com/index.php'
 }
-page_url = environments['PRAC']
+page_url = environments['SHOP']
 force_logout = page_url + '/user/logout'
 
 # TEST DATA - STAGING & PROD
