@@ -25,13 +25,4 @@ class LetsKodeitSelectors(object):
     TD = (By.TAG_NAME, "td")
 
 class ClothingShopSelectors(object):
-    POPULARSECTION = (By.XPATH, "//ul[@id='homefeatured']")
-    POPULARLABEL = (By.XPATH, "//ul[@id='homefeatured']//a[@class ='product-name']")
-    POPULARPRICE = (By.XPATH, "//ul[@id='homefeatured']//div[1]/span[@class='price product-price']")
-    POPULARIMAGE = (By.XPATH, "//ul[@id='homefeatured']//img")
-    # BESTSELLERSECTION = (By.XPATH, "//ul[@id='blockbestsellers']//a")
-    # BESTLABEL = (By.XPATH, "//ul[@id='blockbestsellers']//a[@class ='product-name']")
-    # BESTPRICE = (By.XPATH, "//ul[@id='blockbestsellers']//div[1]/span[@class='price product-price']")
-    # BESTIMAGE = (By.XPATH, "//ul[@id='blockbestsellers']//img")
-    # BEST_CTA = (By.XPATH, "//ul[@id='home-page-tabs']/li[2]/a")
-    # POPULAR_CTA = (By.XPATH, "//ul[@id='home-page-tabs']/li[1]/a")
+    VAR = () #placeholder
