@@ -10,13 +10,8 @@ class BasePage(object):
 
 
 class ClothingShop(BasePage):
+    def is_title_matches(self):
+        return "My Store" in self.driver.title
 
-    def assertion_tests(self):
-        ShopSection = ()
-
-        # TODO
-        # Objective:
-        # 1. Configure environment.py to access the test url.
-        # 2. Identify and store elements in the page_elements file.
-        # 3. Make assertions to validate that each shop item in the section has an image (image source is not empty),
-        # label and price.
+    def add_to_cart(self):
+        var = () #placeholder

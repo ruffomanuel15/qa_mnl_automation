@@ -24,7 +24,5 @@ class LetsKodeitSelectors(object):
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
 
-class ClothingShop(object):
-    IMAGE = ()
-    LABEL = ()
-    PRICE = ()
+class ClothingShopSelectors(object):
+    VAR = () #placeholder

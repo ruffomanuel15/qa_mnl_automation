@@ -10,8 +10,9 @@ class BasePage(object):
 
 
 class LetsKodeItPage(BasePage):
+
     def is_title_matches(self):
-        assert "Practice | Let's Kode It" in self.driver.title
+        return "Practice | Let's Kode It" in self.driver.title
 
     def assertion_tests(self):
         table = self.driver.find_element(*LetsKodeitSelectors.TABLE)
@@ -19,6 +20,15 @@ class LetsKodeItPage(BasePage):
 
         # TODO assert the remaining elements in the table
 
-
-
-
+        rows = table.find_elements(*LetsKodeitSelectors.TR)
+        for row in rows:
+            header = row.find_elements(*LetsKodeitSelectors.TH)
+            # th header
+            # to print (th.text)
+            # assert th.is displayed(), 'Header element not found'
+            col = row.find_elements(*LetsKodeitSelectors.TD)
+            # td col
+            # to print (td.text)
+            # assert td.displayed(), 'Data element not found'
+            assert header is not None, 'Header element not found'
+            assert col is not None, 'Data element not found'
