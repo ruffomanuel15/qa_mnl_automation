@@ -1,6 +1,5 @@
 """ SITE CONSTANTS GO HERE """
 
-<<<<<<< HEAD
 from pages import loginPage as lp,\
     clothingShop as cs
     # pagefile as xx
@@ -22,31 +21,7 @@ environments = {
 page_url = environments['SHOP']
 force_logout = page_url+'/user/logout'
 
-=======
-from pages import loginPage as lp, \
-    letskodeitPage as lc
 
-
-# pagefile as xx
-
-class Pages(object):
-    LoginPage = lp.LoginPage
-    LetsKodeit = lc.LetsKodeItPage
-
-
-#  SamplePage = smp.SamplePage
-
-# ENVIRONMENT
-environments = {
-    'Dev': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
-    'QA': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
-    'STG': 'https://www.google.com/',
-    'PROD': 'https://www.adidas-style.com',
-    'PRAC': 'https://learn.letskodeit.com/p/practice',
-}
-page_url = environments['PRAC']
-force_logout = page_url + '/user/logout'
->>>>>>> master
 
 # TEST DATA - STAGING & PROD
 # STAGING
