@@ -25,8 +25,6 @@ class LetsKodeItPage(BasePage):
         #Get Rows#
         rows = table.find_elements(*LetsKodeitSelectors.TR)
 
-        #Get Headers
-
 
         #Check Items Per Row
         for row in rows:
