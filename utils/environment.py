@@ -1,28 +1,30 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp, \
-    letskodeitPage as lc
-
-
-# pagefile as xx
+from pages import loginPage as lp,\
+    clothingShop as cs,\
+    phpTravels as pt
+    # pagefile as xx
 
 class Pages(object):
     LoginPage = lp.LoginPage
-    LetsKodeit = lc.LetsKodeItPage
-
-
-#  SamplePage = smp.SamplePage
+    ClothingShop = cs.ClothingShop
+    PHPTravels = pt.PHPTravelsPage
+  #  SamplePage = smp.SamplePage
 
 # ENVIRONMENT
 environments = {
-    'Dev': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
-    'QA': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
-    'STG': 'https://www.google.com/',
-    'PROD': 'https://www.adidas-style.com',
-    'PRAC': 'https://learn.letskodeit.com/p/practice',
+    'Dev'   : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
+    'QA'    : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
+    'STG'   : 'https://www.google.com/',
+    'PROD'  : 'https://www.adidas-style.com',
+    'PRAC'  : 'https://learn.letskodeit.com/p/practice',
+    'SHOP'  : 'http://automationpractice.com/index.php',
+    'PHPTRAVELS'    : 'https://www.phptravels.net/'
 }
-page_url = environments['PRAC']
-force_logout = page_url + '/user/logout'
+page_url = environments['PHPTRAVELS']
+force_logout = page_url+'/user/logout'
+
+
 
 # TEST DATA - STAGING & PROD
 # STAGING
