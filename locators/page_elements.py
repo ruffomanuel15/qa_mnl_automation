@@ -39,3 +39,12 @@ class AddToCartSelectors(object):
     SIZESELECTION = (By.XPATH, "//select[@id='group_1']")
     COLORSELECTION = (By.XPATH, "//a[@id='color_24']")
     ADDTOCARDTBTN = (By.XPATH, "//button[@class='exclusive']")
+
+class PHPTravelsLocators(object):
+    CONTAINER = (By.XPATH, "//figure[@class='featured-image-grid-item with-highlight']")
+    PRICE = (By.XPATH, ".//span[@class='item-highlight text-secondary']/span")
+    TOURNAME = (By.XPATH, ".//h5")
+    DURATION = (By.XPATH, ".//span[@class='item-expire']")
+    LOCATION = (By.XPATH, ".//p[@class='location go-text-right']")
+
+
