@@ -10,3 +10,4 @@ class TestPhpTravels(object):
         on.PhpTravels.is_title_matches(self)
         on.PhpTravels.go_to_featured_tours(self)
         on.PhpTravels.featured_tours_info(self)
+        on.PhpTravels.screenshot(self)
