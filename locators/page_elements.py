@@ -29,4 +29,4 @@ class ClothingShopSelectors(object):
 
 
 class DemoCMSSelector(object):
-    LOGIN = (By.XPATH, "//aside[@id='meta-2']//li[1]")
+    VAR = ()

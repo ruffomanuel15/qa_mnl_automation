@@ -11,6 +11,6 @@ class BasePage(object):
 
 class OpenSource(BasePage):
     def login_to_cms(self):
-        login = self.driver.find_element(*DemoCMSSelector.LOGIN)
-
-        login.click()
+        #TODO
+        # log in to CMS
+        pass
