@@ -1,7 +1,9 @@
 """ MODULARIZED PYTEST FIXTURE TO RE-USE ON THE TESTS """
 
 import pytest
+import os
 
+CHROME_DRIVER = os.getenv('CHROME_DRIVER_PATH', 'drivers/chromedriver')
 
 # BROWSER SELECTION
 def pytest_addoption(parser):
@@ -18,7 +20,7 @@ def test_setup(request):
     if browser == 'chrome':
         # RUNNING NORMAL
         global driver
-        driver = webdriver.Chrome(executable_path='/Users/raphaelmanuel/qa_mnl_automation/drivers/chromedriver')
+        driver = webdriver.Chrome(executable_path=CHROME_DRIVER)
 
     elif browser == 'chrome-headless':
         # RUNNING HEADLESS
@@ -26,7 +28,7 @@ def test_setup(request):
         options.headless = True
         options.add_argument('--disable-gpu')
         options.add_argument('--window-size=1920,1080')
-        driver = webdriver.Chrome(options=options, executable_path='/Users/raphaelmanuel/qa_mnl_automation/drivers/chromedriver')
+        driver = webdriver.Chrome(options=options, executable_path=CHROME_DRIVER)
 
     driver.implicitly_wait(30)
     driver.maximize_window()

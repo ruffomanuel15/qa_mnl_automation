@@ -21,7 +21,7 @@ environments = {
     'PROD': 'https://www.adidas-style.com',
     'PRAC': 'https://learn.letskodeit.com/p/practice',
 }
-page_url = environments['PRAC']
+page_url = environments['STG']
 force_logout = page_url + '/user/logout'
 
 # TEST DATA - STAGING & PROD
