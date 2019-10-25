@@ -41,3 +41,13 @@ class AddToCartSelectors(object):
     PROD_SIZE = (By.XPATH, "//select[@id='group_1']")
     PROD_COLOR = (By.XPATH, "//a[@id='color_24']")
     ADDTOCART_CTA = (By.XPATH, "//button[@class='exclusive']")
+
+class PhpTravelsLocators(object):
+    FT_LABEL = (By.XPATH,"//div/h2[text()='Featured Tours']")
+    FT_SECTION =(By.XPATH, "//div[@class='container']//div[contains(@class, 'cols-2')]")
+    FT_CARD = (By.XPATH, "//div[@class='container']//figure[starts-with(@class, 'featured-image')]")
+    FT_CARD_CONTENT = (By.XPATH, "//div[@class='container']//figcaption[@class='content']")
+    FT_PRICE = (By.XPATH, ".//div/div/span/span")
+    FT_NAME = (By.XPATH, ".//h5[@class='mb-0 RTL']")
+    FT_DURATION = (By.XPATH, ".//span[@class='item-expire']")
+    FT_LOCATION = (By.XPATH, ".//p[@class='location go-text-right']")

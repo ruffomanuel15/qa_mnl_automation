@@ -78,4 +78,4 @@ class AddToCart(BasePage):
 
 
     def screenshot(self):
-        Commands.take_screenshot(self.driver, test="add_to_cart")
+        Commands.take_screenshot(self.driver, test="assertion_tests")
