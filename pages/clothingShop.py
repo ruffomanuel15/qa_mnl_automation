@@ -45,6 +45,7 @@ class ClothingShop(BasePage):
         # Clicking Dresses tab
         dressesLink = self.driver.find_element(*AddToCartSelectors.DRESSESLINK)
         dressesLink.click()
+        time.sleep(2)
 
         # Hovering on the Printed Dress Element
         summerDress = self.driver.find_element(*AddToCartSelectors.SUMMERDRESS)

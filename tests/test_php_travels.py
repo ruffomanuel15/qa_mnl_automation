@@ -9,3 +9,4 @@ class TestPHPTravels(object):
         self.driver.get(env.page_url)
         on.PHPTravels.is_title_matches(self)
         on.PHPTravels.featured_tours_details(self)
+        on.PHPTravels.screenshot()

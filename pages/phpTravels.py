@@ -42,6 +42,9 @@ class PHPTravelsPage(BasePage):
         print("\n" + "*"*50)
         print("Tours that are less $100: " + str(Less100))
 
+    def screenshot(self):
+        Commands.take_screenshot(self.driver, test="tour_test")
+
 
 
 
