@@ -25,7 +25,7 @@ class LetsKodeitSelectors(object):
     TD = (By.TAG_NAME, "td")
 
 class ClothingShopSelectors(object):
-    GRID = (By.ID, "homefeatured")
+    PRODUCT_LIST = (By.CLASS_NAME, "product_list")
     PRODUCT = (By.CLASS_NAME, "product-container")
     PRODUCT_TOP = (By.CLASS_NAME, "left-block")
     PRODUCT_BOTTOM = (By.CLASS_NAME, "right-block")

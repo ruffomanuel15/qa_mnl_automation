@@ -18,14 +18,14 @@ class ClothingShop(BasePage):
 
     def assertion_tests(self):
         #Get the Grid
-        grid = self.driver.find_element(*ClothingShopSelectors.GRID)
+        product_list = self.driver.find_element(*ClothingShopSelectors.PRODUCT_LIST)
 
         #Verify if Grid Exists
-        assert grid.is_displayed(), 'Grid is Missing'
+        assert product_list.is_displayed(), 'Grid is Missing'
 
 
         #Get each Product Block
-        products = grid.find_elements(*ClothingShopSelectors.PRODUCT)
+        products = product_list.find_elements(*ClothingShopSelectors.PRODUCT)
 
 
         for product in products:
@@ -46,6 +46,6 @@ class ClothingShop(BasePage):
             print(price.text)
 
             #Assert if each item has a value
-            assert name.text is not None, 'Name is not displayed'
-            assert image_src is not None, 'Name is not displayed'
-            assert price.text is not None, 'Name is not displayed'
+            assert name.text is not None, 'Name is Empty'
+            assert image_src is not None, 'Image SRC is Empty'
+            assert price.text is not None, 'Price is Empty'
