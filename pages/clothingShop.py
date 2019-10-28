@@ -15,3 +15,37 @@ class ClothingShop(BasePage):
 
     def add_to_cart(self):
         var = () #placeholder
+
+    def assertion_tests(self):
+        #Get the Grid
+        grid = self.driver.find_element(*ClothingShopSelectors.GRID)
+
+        #Verify if Grid Exists
+        assert grid.is_displayed(), 'Grid is Missing'
+
+
+        #Get each Product Block
+        products = grid.find_elements(*ClothingShopSelectors.PRODUCT)
+
+
+        for product in products:
+            #get the Image's block
+            product_top = product.find_element(*ClothingShopSelectors.PRODUCT_TOP)
+
+            #get the Name/Price's block
+            product_bottom = product.find_element(*ClothingShopSelectors.PRODUCT_BOTTOM)
+
+            #Get Name, Image Source, and Price
+            name = product_bottom.find_element(*ClothingShopSelectors.NAME)
+            image_src = product_top.find_element(*ClothingShopSelectors.IMAGE).get_attribute("src")
+            price = product_bottom.find_element(*ClothingShopSelectors.PRICE)
+
+            #Print Values
+            print(name.text)
+            print(image_src)
+            print(price.text)
+
+            #Assert if each item has a value
+            assert name.text is not None, 'Name is not displayed'
+            assert image_src is not None, 'Name is not displayed'
+            assert price.text is not None, 'Name is not displayed'

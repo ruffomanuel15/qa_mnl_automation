@@ -25,4 +25,13 @@ class LetsKodeitSelectors(object):
     TD = (By.TAG_NAME, "td")
 
 class ClothingShopSelectors(object):
+    GRID = (By.ID, "homefeatured")
+    PRODUCT = (By.CLASS_NAME, "product-container")
+    PRODUCT_TOP = (By.CLASS_NAME, "left-block")
+    PRODUCT_BOTTOM = (By.CLASS_NAME, "right-block")
+    NAME = (By.CLASS_NAME, "product-name")
+    PRICE = (By.TAG_NAME, "span")
+    IMAGE = (By.TAG_NAME, "img")
+
+
     VAR = () #placeholder
