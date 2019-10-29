@@ -8,6 +8,51 @@ class BasePage(object):
     def __init__(self, driver):
         self.driver = driver
 
+def add_to_cart(self):
+    #MAIN PAGE
+    top_menu = self.driver.find_element(*AddToCartSelectors.TOP_MENU)
+    dresses = top_menu.find_element(*AddToCartSelectors.DRESSES)
+
+    assert top_menu.is_displayed(), "Top Menu is Missing"
+
+    #Click Dresses Tab
+    dresses.click()
+
+    #DRESSES PAGE
+    product_list = self.driver.find_element(*ClothingShopSelectors.PRODUCT_LIST)
+    printed_dresses = product_list.find_element(*AddToCartSelectors.PRINTED_DRESS)
+
+    assert printed_dresses.is_displayed(), "Printed Dresses is Missing"
+    #Scroll to the specific Printed Dresses and Hover
+    printed_dresses.location_once_scrolled_into_view
+
+    #To make sure that the element will be hovered
+    time.sleep(3)
+
+    hover = ActionChains(self.driver).move_to_element(printed_dresses)
+    hover.perform()
+
+    #Click More
+    more_button = printed_dresses.find_element(*AddToCartSelectors.MORE_BUTTON)
+    more_button.click()
+
+    #SPECIFIC ITEM PAGE
+    #Size, Color, and Add to Cart
+    size_dropdown = self.driver.find_element(*AddToCartSelectors.SIZE_DROPDOWN)
+    size = "M"
+    color_picker = self.driver.find_element(*AddToCartSelectors.COLOR_PICKER)
+    color = "Pink"
+    add_to_cart = self.driver.find_element(*AddToCartSelectors.ADD_TO_CART)
+
+
+    #Set Size
+    size_dropdown.find_element(By.XPATH, './option[@title="'+size+'"]').click()
+
+    #Set Color
+    color_picker.find_element(By.XPATH, './li/a[@title="' + color + '"]').click()
+
+    #Click Add to Cart
+    add_to_cart.click()
 
 class ClothingShop(BasePage):
     def is_title_matches(self):

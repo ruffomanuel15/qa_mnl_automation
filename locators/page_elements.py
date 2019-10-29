@@ -33,5 +33,14 @@ class ClothingShopSelectors(object):
     PRICE = (By.TAG_NAME, "span")
     IMAGE = (By.TAG_NAME, "img")
 
+class AddToCartSelectors(object):
+    TOP_MENU = (By.CLASS_NAME, "sf-menu")
+    DRESSES = (By.XPATH, './li/a[text()="Dresses"]')
 
-    VAR = () #placeholder
+    PRODUCT_LIST = (By.CLASS_NAME, "product_list grid row")
+    PRINTED_DRESS = (By.XPATH, './li[2]')
+    MORE_BUTTON = (By.XPATH, './/span[text()="More"]')
+
+    SIZE_DROPDOWN = (By.TAG_NAME, "select")
+    COLOR_PICKER = (By.ID, "color_to_pick_list")
+    ADD_TO_CART = (By.NAME, "Submit")
