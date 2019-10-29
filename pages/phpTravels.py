@@ -45,6 +45,19 @@ class PHPTravelsPage(BasePage):
     def screenshot(self):
         Commands.take_screenshot(self.driver, test="tour_test")
 
+    def search_destination(self):
+        self.driver.find_element(*SearchDestination.DESTINATIONFIELD).send_keys("barce")
+        self.driver.find_element(*SearchDestination.DESTINATION).click()
+        self.driver.find_element(*SearchDestination.CHECKINFIELD).click()
+        self.driver.find_element(*SearchDestination.CHECKINDATE).click()
+        self.driver.find_element(*SearchDestination.CHECKOUTFIELD).click()
+        self.driver.find_element(*SearchDestination.NEXTBTN).click()
+        self.driver.find_element(*SearchDestination.CHECKOUTDATE).click()
+        self.driver.find_element(*SearchDestination.CHILDFIELD).click()
+        self.driver.find_element(*SearchDestination.SEARCHBTN).click()
+
+
+
 
 
 

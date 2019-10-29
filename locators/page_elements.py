@@ -48,3 +48,13 @@ class PHPTravelsLocators(object):
     LOCATION = (By.XPATH, ".//p[@class='location go-text-right']")
 
 
+class SearchDestination(object):
+    DESTINATIONFIELD = (By.XPATH, "//input[@id='s2id_autogen2']")
+    DESTINATION = (By.XPATH, "//ul[@class='select2-result-sub']/li[2]/div[@class='select2-result-label']")
+    CHECKINFIELD = (By.XPATH, "//input[@id='checkin']")
+    CHECKINDATE = (By.XPATH, "//div[@id='datepickers-container']/div[1]//div[@class='datepicker--cells datepicker--cells-days']/div[31]")
+    CHECKOUTFIELD = (By.XPATH, "//input[@id='checkout']")
+    CHECKOUTDATE = (By.XPATH, "//div[@id='datepickers-container']/div[2]//div[text()='3']")
+    NEXTBTN = (By.XPATH, "//div[@class='datepicker -bottom-left- -from-bottom- active']//div[@data-action='next']")
+    CHILDFIELD = (By.XPATH, "//div[@class='col 01']//span/button[1]")
+    SEARCHBTN = (By.XPATH, "//div[@class='col-md-2 col-xs-12 o1']//button[@type='submit']")
