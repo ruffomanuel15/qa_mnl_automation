@@ -6,6 +6,7 @@ from pages import clothingShop as cs,\
     phpTravels as pt
 
 
+
 # pagefile as xx
 
 class Pages(object):
@@ -14,6 +15,7 @@ class Pages(object):
     LetsKodeit = lc.LetsKodeItPage
     DressesPage = cs.AddToCart
     PhpTravels = pt.PhpTravels
+    PhpTravelSearch = pt.PhpTravelSearch
 
 
 #  SamplePage = smp.SamplePage
