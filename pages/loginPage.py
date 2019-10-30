@@ -48,6 +48,6 @@ class LoginPage(BasePage):
     #         f.write("This is line %d\r\n" % (i + 1))
     #         # write string in text file
     #     f.close()
-    #     # close file
+        # close file
 
 #AJ: Inserts Comment Here!

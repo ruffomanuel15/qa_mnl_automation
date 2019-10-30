@@ -39,7 +39,7 @@ class Commands(Base):
         date = x.ctime()
         name = test
 
-        self.save_screenshot('/Users/raphaelmanuel/Desktop/' + str(name) + '_' + str(date) + '_.png')
+        self.save_screenshot('/Users/gbs/qa_mnl_automation/screenshot/'+ str(name) + '_' + str(date) + '_.png')
 
         return test
 
@@ -78,3 +78,6 @@ class Commands(Base):
         ActionChains(selenium).move_to_element(temp).perform()
 
         #test comment
+
+    def save_screenshot(self, param):
+        pass
