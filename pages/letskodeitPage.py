@@ -18,4 +18,22 @@ class LetsKodeItPage(BasePage):
         table = self.driver.find_element(*LetsKodeitSelectors.TABLE)
         assert table.is_displayed(), 'Table is missing'
 
-        # TODO assert the remaining elements in the tabl
+        #find row
+        tr = self.driver.find_elements(*LetsKodeitSelectors.TR)
+
+        #find element per row
+        for x in tr:
+            th = x.find_elements(*LetsKodeitSelectors.TH)
+            td = x.find_elements(*LetsKodeitSelectors.TD)
+
+            #print element per cell
+            for y in th:
+                assert y is not None, "Cell is empty."
+                print(y.text)
+
+            for z in td:
+                assert z is not None, "Cell is empty."
+                print(z.text)
+
+
+    # TODO assert the remaining elements in the tabl

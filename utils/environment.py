@@ -24,7 +24,7 @@ environments = {
     'PRAC': 'https://learn.letskodeit.com/p/practice',
     'CMS' : 'https://s1.demo.opensourcecms.com/wordpress/'
 }
-page_url = environments['CMS']
+page_url = environments['PRAC']
 force_logout = page_url + '/user/logout'
 
 # TEST DATA - STAGING & PROD
