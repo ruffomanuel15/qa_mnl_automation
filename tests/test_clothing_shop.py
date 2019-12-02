@@ -9,3 +9,4 @@ class TestClothingShop(object):
         self.driver.get(env.page_url)
         on.ClothingShop.is_title_matches(self)
         on.ClothingShop.assertion_tests(self)
+

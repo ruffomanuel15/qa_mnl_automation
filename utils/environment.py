@@ -1,16 +1,19 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp, \
-    letskodeitPage as lc, \
-    demoCMSpage as dm
+from pages import clothingShop as cs,\
+    loginPage as lp, \
+    letskodeitPage as lc,\
+    phpTravels as pt
 
 
 # pagefile as xx
 
 class Pages(object):
+    ClothingShop = cs.ClothingShop
     LoginPage = lp.LoginPage
     LetsKodeit = lc.LetsKodeItPage
-    OpenSourceDemo = dm.OpenSource
+    DressesPage = cs.AddToCart
+    PhpTravels = pt.PhpTravels
 
 
 #  SamplePage = smp.SamplePage
@@ -22,9 +25,10 @@ environments = {
     'STG': 'https://www.google.com/',
     'PROD': 'https://www.adidas-style.com',
     'PRAC': 'https://learn.letskodeit.com/p/practice',
-    'CMS' : 'https://s1.demo.opensourcecms.com/wordpress/'
+    'SHOP': 'http://automationpractice.com/index.php',
+    'PHPTRAVEL': 'https://phptravels.net/'
 }
-page_url = environments['CMS']
+page_url = environments['PHPTRAVEL']
 force_logout = page_url + '/user/logout'
 
 # TEST DATA - STAGING & PROD
@@ -42,11 +46,6 @@ bad_pwd = 'badpwd'
 # Sales POC Account (GMAIL)
 poc_email = 'qaeautom@gmail.com'
 poc_password = 'bluemonkey56'
-
-
-# Test CMS credentials
-test_user = 'opensourcecms'
-test_pw = 'opensourcecms'
 
 # PATH TO REPORTS
 # results/REPORT_NAME.html .. use --self-contained-html flag to be able to deliver report + styles
