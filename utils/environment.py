@@ -2,7 +2,8 @@
 
 from pages import loginPage as lp, \
     letskodeitPage as lc, \
-    clothingShop as cs
+    clothingShop as cs, \
+    phpTravels as pt
 
 
 # pagefile as xx
@@ -11,6 +12,7 @@ class Pages(object):
     LoginPage = lp.LoginPage
     LetsKodeit = lc.LetsKodeItPage
     ClothingShop = cs.ClothingShop
+    PHPTravels = pt.PHPTravels
 
 
 #  SamplePage = smp.SamplePage
@@ -23,8 +25,9 @@ environments = {
     'PROD': 'https://www.adidas-style.com',
     'PRAC': 'https://learn.letskodeit.com/p/practice',
     'CLOT': 'http://automationpractice.com/index.php',
+    'TRAV': 'https://www.phptravels.net/'
 }
-page_url = environments['CLOT']
+page_url = environments['TRAV']
 force_logout = page_url + '/user/logout'
 
 # TEST DATA - STAGING & PROD

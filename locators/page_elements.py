@@ -44,3 +44,15 @@ class AddToCartSelectors(object):
     SIZE_DROPDOWN = (By.TAG_NAME, "select")
     COLOR_PICKER = (By.ID, "color_to_pick_list")
     ADD_TO_CART = (By.NAME, "Submit")
+
+class PHPTravelsSelectors(object):
+    FEATURED_TOURS = (By.XPATH, '//h2[text()="Featured Tours"]/../../div[contains(@class,"row")]')
+    TOUR_ITEMS = (By.CLASS_NAME, "col")
+    ITEM_CAPTION = (By.TAG_NAME, "figcaption")
+    PRICE = (By.XPATH, ".//div/span/span")
+    DURATION = (By.CLASS_NAME, "item-expire")
+    LOCATION = (By.TAG_NAME, "p")
+    TITLE = (By.TAG_NAME, "h5")
+
+    FEATURED_CARS = (By.XPATH, '//h2[text()="Featured Cars"]/../following-sibling::div')
+    CAR_ITEMS = (By.CLASS_NAME, "product-grid-item")
