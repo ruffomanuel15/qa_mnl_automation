@@ -2,6 +2,7 @@ from locators.page_elements import *
 from utils import environment as env
 from extensions.commands import *
 from selenium.webdriver.common.by import By
+import datetime
 
 
 class BasePage(object):
@@ -77,3 +78,47 @@ class PHPTravels(BasePage):
 
         #just to check if it goes to the page
         time.sleep(3)
+
+class TravelPackage(BasePage):
+    def is_title_matches(self):
+        return "My Store" in self.driver.title
+
+    def dest(self):
+
+        #Search in the searchbar using "Barce"
+        destination = self.driver.find_element(*PHPTravelsSelectors.DESTINATION)
+        destination.send_keys("Barce")
+
+        #Click the completed "Barcelona, Spain"
+        completion = self.driver.find_element(*PHPTravelsSelectors.COMPLETION)
+        completion.click()
+
+        #Get current date
+        currentdate = datetime.date.today()
+
+        #Input the current date in Check In
+        checkin = self.driver.find_element(*PHPTravelsSelectors.CHECKIN)
+        checkin.click()
+        checkin.clear()
+        checkin.send_keys(currentdate.strftime("%d/%m/%Y")) #Format is set to DD/MM/YYYY
+
+        #Add 5 days to the current date
+        currentdate_5 = currentdate + datetime.timedelta(days=5)
+
+        #Input the 5 days later in Check Out
+        checkout = self.driver.find_element(*PHPTravelsSelectors.CHECKOUT)
+        checkout.click()
+        checkout.clear()
+        checkout.send_keys(currentdate_5.strftime("%d/%m/%Y")) #Format is set to DD/MM/YYYY
+
+        #Add 1 child
+        add_children = self.driver.find_element(*PHPTravelsSelectors.ADD_CHILDREN)
+        add_children.click()
+
+        #Click Search button
+        search_btn = self.driver.find_element(*PHPTravelsSelectors.SEARCH_BTN)
+        search_btn.click()
+
+    def take_screenshot(self):
+        time.sleep(5)
+        Commands.take_screenshot(self.driver, test="My Purchase")

@@ -56,3 +56,10 @@ class PHPTravelsSelectors(object):
 
     FEATURED_CARS = (By.XPATH, '//h2[text()="Featured Cars"]/../following-sibling::div')
     CAR_ITEMS = (By.CLASS_NAME, "product-grid-item")
+
+    DESTINATION = (By.XPATH, '//span[contains(text(),"Search by Hotel or City Name")]/..//following::input[1]')
+    COMPLETION = (By.XPATH, '//div[contains(text(),"lona, Spain")]')
+    CHECKIN = (By.ID, 'checkin')
+    CHECKOUT = (By.ID, 'checkout')
+    ADD_CHILDREN = (By.XPATH, '//input[@name="children"]/../descendant::button[contains(text(),"+")]')
+    SEARCH_BTN = (By.XPATH, '//form[@name="HOTELS"]/../descendant::button[@type="submit" and contains(text(),"Search")]')
