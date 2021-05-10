@@ -24,42 +24,12 @@ class LetsKodeitSelectors(object):
     TH = (By.TAG_NAME, "th")
     TD = (By.TAG_NAME, "td")
 
+
 class ClothingShopSelectors(object):
-    PRODUCT_LIST = (By.CLASS_NAME, "product_list")
-    PRODUCT = (By.CLASS_NAME, "product-container")
-    PRODUCT_TOP = (By.CLASS_NAME, "left-block")
-    PRODUCT_BOTTOM = (By.CLASS_NAME, "right-block")
-    NAME = (By.CLASS_NAME, "product-name")
-    PRICE = (By.TAG_NAME, "span")
-    IMAGE = (By.TAG_NAME, "img")
-
-class AddToCartSelectors(object):
-    TOP_MENU = (By.CLASS_NAME, "sf-menu")
-    DRESSES = (By.XPATH, './li/a[text()="Dresses"]')
-
-    PRODUCT_LIST = (By.CLASS_NAME, "product_list grid row")
-    PRINTED_DRESS = (By.XPATH, './li[2]')
-    MORE_BUTTON = (By.XPATH, './/span[text()="More"]')
-
-    SIZE_DROPDOWN = (By.TAG_NAME, "select")
-    COLOR_PICKER = (By.ID, "color_to_pick_list")
-    ADD_TO_CART = (By.NAME, "Submit")
-
-class PHPTravelsSelectors(object):
-    FEATURED_TOURS = (By.XPATH, '//h2[text()="Featured Tours"]/../../div[contains(@class,"row")]')
-    TOUR_ITEMS = (By.CLASS_NAME, "col")
-    ITEM_CAPTION = (By.TAG_NAME, "figcaption")
-    PRICE = (By.XPATH, ".//div/span/span")
-    DURATION = (By.CLASS_NAME, "item-expire")
-    LOCATION = (By.TAG_NAME, "p")
-    TITLE = (By.TAG_NAME, "h5")
-
-    FEATURED_CARS = (By.XPATH, '//h2[text()="Featured Cars"]/../following-sibling::div')
-    CAR_ITEMS = (By.CLASS_NAME, "product-grid-item")
-
-    DESTINATION = (By.XPATH, '//span[contains(text(),"Search by Hotel or City Name")]/..//following::input[1]')
-    COMPLETION = (By.XPATH, '//div[contains(text(),"lona, Spain")]')
-    CHECKIN = (By.ID, 'checkin')
-    CHECKOUT = (By.ID, 'checkout')
-    ADD_CHILDREN = (By.XPATH, '//input[@name="children"]/../descendant::button[contains(text(),"+")]')
-    SEARCH_BTN = (By.XPATH, '//form[@name="HOTELS"]/../descendant::button[@type="submit" and contains(text(),"Search")]')
+    PRODUCT_GRID = (By.XPATH, '//*[contains(@class, "active") and contains(@class, "product_list")]')
+    PRODUCT_ITEM = (By.CLASS_NAME, 'product-container')
+    PRODUCT_TOP = (By.CLASS_NAME, 'left-block')
+    PRODUCT_BOT = (By.CLASS_NAME, 'right-block')
+    PRODUCT_NAME = (By.CLASS_NAME, 'product-name')
+    PRODUCT_PRICE = (By.TAG_NAME, 'span')
+    IMAGE_SRC = (By.TAG_NAME, 'img')

@@ -20,27 +20,21 @@ class LetsKodeItPage(BasePage):
 
         # TODO assert the remaining elements in the tabl
 
-        #Julian Challenge 3
+        # Julian - Challenge 3
+        self.driver.execute_script("arguments[0].scrollIntoView();", table)
 
-        #Get Rows#
-        rows = table.find_elements(*LetsKodeitSelectors.TR)
+        # Check all the rows
+        tRows = table.find_elements(*LetsKodeitSelectors.TR)
 
+        for row in tRows:
+            tHeaders = row.find_elements(*LetsKodeitSelectors.TH)
+            tData = row.find_elements(*LetsKodeitSelectors.TD)
 
-        #Check Items Per Row
-        for row in rows:
-            headers = row.find_elements(*LetsKodeitSelectors.TH)
-            data = row.find_elements(*LetsKodeitSelectors.TD)
-
-
-            #Print Headers and Rows
-            for header in headers:
+            # Print Table Headers and Data if not empty
+            for header in tHeaders:
+                assert header is not None, 'Table Header element is not displayed'
                 print(header.text)
 
-            for item in data:
-                print(item.text)
-
-            #Assertion Per Row Checked
-            assert headers is not None, 'Table Header element is not displayed'
-            assert data is not None, 'Table Header element is not displayed'
-
-
+            for data in tData:
+                assert data is not None, 'Table Data element is not displayed'
+                print(data.text)
