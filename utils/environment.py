@@ -1,31 +1,23 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp, \
-    letskodeitPage as lc, \
-    demoCMSpage as dm
+from pages import loginPage as lp#, \
+   # samplePage as smp, \
 
-
-# pagefile as xx
 
 class Pages(object):
     LoginPage = lp.LoginPage
-    LetsKodeit = lc.LetsKodeItPage
-    OpenSourceDemo = dm.OpenSource
-
-
-#  SamplePage = smp.SamplePage
+  #  SamplePage = smp.SamplePage
 
 # ENVIRONMENT
 environments = {
-    'Dev': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
-    'QA': 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
-    'STG': 'https://www.google.com/',
-    'PROD': 'https://www.adidas-style.com',
-    'PRAC': 'https://learn.letskodeit.com/p/practice',
-    'CMS' : 'https://s1.demo.opensourcecms.com/wordpress/'
+    'Dev'   : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
+    'QA'    : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
+    'STG'   : 'https://sit:SS19pro!@staging.adidas-style.com',
+    'PROD'  : 'https://www.adidas-style.com'
 }
-page_url = environments['CMS']
-force_logout = page_url + '/user/logout'
+page_url = environments['STG']
+force_logout = page_url+'/user/logout'
+
 
 # TEST DATA - STAGING & PROD
 # STAGING
@@ -43,10 +35,6 @@ bad_pwd = 'badpwd'
 poc_email = 'qaeautom@gmail.com'
 poc_password = 'bluemonkey56'
 
-
-# Test CMS credentials
-test_user = 'opensourcecms'
-test_pw = 'opensourcecms'
-
 # PATH TO REPORTS
 # results/REPORT_NAME.html .. use --self-contained-html flag to be able to deliver report + styles
+

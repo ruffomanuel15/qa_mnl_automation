@@ -25,7 +25,13 @@ class LetsKodeitSelectors(object):
     TD = (By.TAG_NAME, "td")
 
 class ClothingShopSelectors(object):
-    VAR = () #placeholder
+    PRODUCT_GRID = (By.XPATH, '//*[contains(@class, "active") and contains(@class, "product_list")]')
+    PRODUCT_ITEM = (By.CLASS_NAME, 'product-container')
+    PRODUCT_TOP = (By.CLASS_NAME, 'left-block')
+    PRODUCT_BOT = (By.CLASS_NAME, 'right-block')
+    PRODUCT_NAME = (By.CLASS_NAME, 'product-name')
+    PRODUCT_PRICE = (By.TAG_NAME, 'span')
+    IMAGE_SRC = (By.TAG_NAME, 'img')
 
 
 class DemoCMSSelector(object):
