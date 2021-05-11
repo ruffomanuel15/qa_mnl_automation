@@ -3,7 +3,7 @@
 import pytest
 import os
 
-CHROME_DRIVER = os.getenv('CHROME_DRIVER_PATH', 'drivers/chromedriver')
+CHROME_DRIVER = os.getenv('CHROME_DRIVER_PATH', '../drivers/chromedriver')
 
 # BROWSER SELECTION
 def pytest_addoption(parser):
