@@ -1,21 +1,25 @@
 """ SITE CONSTANTS GO HERE """
 
-from pages import loginPage as lp#, \
-   # samplePage as smp, \
+from pages import loginPage as lp, \
+   letskodeitPage as lk, \
+    clothingShop as cs
+    # samplePage as smp, \
 
 
 class Pages(object):
     LoginPage = lp.LoginPage
+    LetsKodeItPage = lk.LetsKodeItPage
+    ClothingShop = cs.ClothingShop
   #  SamplePage = smp.SamplePage
 
 # ENVIRONMENT
 environments = {
-    'Dev'   : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-dev.codeandtheory.net',
-    'QA'    : 'https://admin:idm[Ey^7qruTnZvV@ao-sit-qa.codeandtheory.net',
+    'KODE'   : 'https://learn.letskodeit.com/p/practice',
+    'CLOT'    : 'http://automationpractice.com/index.php',
     'STG'   : 'https://sit:SS19pro!@staging.adidas-style.com',
     'PROD'  : 'https://www.adidas-style.com'
 }
-page_url = environments['STG']
+page_url = environments['CLOT']
 force_logout = page_url+'/user/logout'
 
 
