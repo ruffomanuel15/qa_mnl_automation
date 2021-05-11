@@ -8,4 +8,6 @@ class TestClothingShop(object):
     def test_clothingshop(self):
         self.driver.get(env.page_url)
         on.ClothingShop.is_title_matches(self)
-        on.ClothingShop.assertion_tests(self)
+        # clothingShop code is ran for every tab
+        on.ClothingShop.assertion_tests(self, "Popular")
+        on.ClothingShop.assertion_tests(self, "Best Sellers")
