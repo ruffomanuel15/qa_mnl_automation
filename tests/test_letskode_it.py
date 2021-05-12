@@ -7,6 +7,6 @@ from utils.environment import Pages as on
 class TestLetsKodeIt(object):
     def test_tablepage(self):
         self.driver.get(env.page_url)
-        on.LetsKodeit.is_title_matches(self)
-        on.LetsKodeit.assertion_tests(self)
+        on.LetsKodeIt.is_title_matches(self)
+        on.LetsKodeIt.assertion_tests(self)
 
